@@ -4,75 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>newsPortal - नेपालका ताजा र निष्पक्ष समाचार | Nepal Breaking News</title>
-    <meta name="title" content="newsPortal - नेपालका ताजा र निष्पक्ष समाचार | Nepal Breaking News">
-    <meta name="description" content="newsPortal मा पाउनुहोस् नेपालका ताजा समाचार, राजनीति, अर्थतन्त्र, खेलकुद, मनोरञ्जन र प्रविधिका सत्य तथा निष्पक्ष समाचारहरू।">
-    <meta name="keywords" content="Nepal News, Nepali News Portal, Breaking News Nepal, Online News Nepal, नेपाली समाचार, ताजा खबर, newsPortal">
-    <meta name="author" content="newsPortal Nepal">
-    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arjunpokhrel999.github.io/newsPortal/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="newsPortal">
-    <meta property="og:url" content="https://arjunpokhrel999.github.io/newsPortal/">
-    <meta property="og:title" content="newsPortal - नेपालका ताजा र निष्पक्ष समाचार">
-    <meta property="og:description" content="नेपाल तथा विश्वभरका ताजा र सत्य समाचारहरू newsPortal मा पढ्नुहोस्।">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop">
-    <meta property="og:locale" content="ne_NP">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://arjunpokhrel999.github.io/newsPortal/">
-    <meta name="twitter:title" content="newsPortal - नेपालका ताजा र निष्पक्ष समाचार">
-    <meta name="twitter:description" content="नेपालका ताजा र सत्य समाचारहरू newsPortal मा पढ्नुहोस्।">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsMediaOrganization",
-      "name": "newsPortal",
-      "url": "https://arjunpokhrel999.github.io/newsPortal/",
-      "logo": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop",
-      "sameAs": [],
-      "description": "नेपालका ताजा र निष्पक्ष समाचार दिने अनलाइन न्युज पोर्टल।"
-    }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <div class="top-bar"><span id="date">आजको मिति</span></div>
-        <div class="logo-container"><h1>NEWS<span>PORTAL</span></h1></div>
+        <div class="top-bar">
+            <span id="date">आजको मिति</span>
+        </div>
+        <div class="logo-container">
+            <h1>डिजिटल<span>खबर</span></h1>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#">गृहपृष्ठ</a></li>
-                <li><a href="#">समाचार</a></li>
-                <li><a href="#">अर्थतन्त्र</a></li>
-                <li><a href="#">खेलकुद</a></li>
-                <li><a href="#">प्रविधि</a></li>
+            <ul id="categoryMenu">
+                <li><a href="#" data-category="सबै" class="active">गृहपृष्ठ</a></li>
+                <li><a href="#" data-category="अर्थतन्त्र">अर्थतन्त्र</a></li>
+                <li><a href="#" data-category="खेलकुद">खेलकुद</a></li>
+                <li><a href="#" data-category="प्रविधि">प्रविधि</a></li>
+                <li><a href="#" data-category="विश्व">विश्व</a></li>
             </ul>
         </nav>
     </header>
+
     <section class="ticker-container" aria-label="मुख्य खबर">
         <div class="ticker-title">मुख्य खबर</div>
         <div class="ticker-text">
             <marquee behavior="scroll" direction="left">newsPortal मा स्वागत छ! नेपाल तथा विश्वभरका ताजा र निष्पक्ष समाचारका लागि हामीलाई पछ्याउँदै गर्नुहोस्।</marquee>
         </div>
     </section>
+
     <main class="container">
-        <section class="main-news">
-            <article class="news-card feature-card">
-                <img id="main-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop" alt="विशेष समाचार">
-                <div class="card-content">
-                    <span class="category">विशेष समाचार</span>
-                    <h2>काठमाडौँ उपत्यकामा ट्राफिक नियम उल्लङ्घन गर्नेलाई डिजिटल क्यामेराले समात्ने</h2>
-                    <p>काठमाडौँ उपत्यका ट्राफिक प्रहरी कार्यालयले सडक अनुशासन कायम राख्न प्रविधिको प्रयोग बढाएको छ...</p>
-                    <a href="#" class="read-btn">पुरा पढ्नुहोस्</a>
-                </div>
-            </article>
+        <section class="news-grid" id="newsGrid">
+            <!-- JavaScript ले news.json बाट ल्याएर हाल्छ -->
         </section>
-        <section class="news-grid" id="newsGrid"></section>
     </main>
-    <footer><p>&copy; २०२६ newsPortal. सर्वाधिकार सुरक्षित।</p></footer>
+
+    <!-- Modal Box: पुरा समाचार पढ्नका लागि -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span id="modalCategory" class="category"></span>
+            <span id="modalDate" class="modal-date"></span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImg" src="" alt="">
+            <p id="modalBody"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; २०२६ newsPortal. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
